@@ -3,7 +3,7 @@ requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "hmmpy"
+name = "hmmpy-ai"
 version = "0.3.3"
 description = "Typed probabilistic decisions for OpenAI-compatible language models."
 readme = "README.md"
