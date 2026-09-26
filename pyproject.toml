@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hmmpy"
+version = "0.3.3"
+description = "Typed probabilistic decisions for OpenAI-compatible language models."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Pouriya Khalilian" }]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["llm", "ai", "decision-engine", "probabilistic", "openai-compatible", "uncertainty", "abstention"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Operating System :: OS Independent"
+]
+dependencies = ["openai>=1.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1.2", "twine>=5"]
+
+[project.urls]
+Homepage = "https://github.com/01pouria/hmmpy"
+Repository = "https://github.com/01pouria/hmmpy"
+Issues = "https://github.com/01pouria/hmmpy/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
